@@ -9,8 +9,8 @@ let mongourl = process.env.MONGOURL;
 const mailClient = smtp.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD,
+    user: "jjohnsamuel21@gmail.com",
+    pass: "uqppobbcpnnezzck",
   },
 });
 
