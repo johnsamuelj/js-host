@@ -14,6 +14,15 @@ const mailClient = smtp.createTransport({
   },
 });
 
+(async() => {
+  const result = await mailClient.sendMail({
+    from: 'jjohnsamuel21@gmail.com',
+    to: 'jjohnsamuel21@gmail.com',
+      subject: 'Hello World',
+      text: JSON.stringify({deploy: "started"})
+  });
+})();
+
 cron.schedule("17 23 * * *", async () => {
   // Your script execution logic here
   console.log("Script executed!");
