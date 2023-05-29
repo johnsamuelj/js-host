@@ -1,2 +1,2 @@
 [build]
-  command = "node index.js"
+  command = "npm install && node index.js"
