@@ -1,0 +1,25 @@
+{
+  "name": "js-host",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnsamuelj/js-host.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnsamuelj/js-host/issues"
+  },
+  "homepage": "https://github.com/johnsamuelj/js-host#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongodb": "^5.5.0",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.3"
+  }
+}

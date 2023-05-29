@@ -1,19 +1,20 @@
 const cron = require("node-cron");
+require('dotenv').config();
 const fs = require("fs");
 const { MongoClient } = require("mongodb");
 const smtp = require('nodemailer');
 let projectDataJson = {};
-let mongourl = process.env.mongourl;
+let mongourl = process.env.MONGOURL;
 
 const mailClient = smtp.createTransport({
   service: "gmail",
   auth: {
-    user: 'jjohnsamuel21@gmail.com',
-    pass: 'uqppobbcpnnezzck',
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD,
   },
 });
 
-cron.schedule("36 20 * * *", async () => {
+cron.schedule("17 23 * * *", async () => {
   // Your script execution logic here
   console.log("Script executed!");
   const client = await MongoClient.connect(mongourl);
